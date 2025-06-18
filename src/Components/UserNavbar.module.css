@@ -1,0 +1,156 @@
+/* UserNavbar.module.css */
+
+.navbar {
+  width: 100%;
+  background-color: #89ebaf;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+}
+
+.icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.appName {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex: 0 0 auto;
+}
+
+.userPanel {
+  font-size: 2rem; /* Adjusted for better balance */
+  font-weight: 700;
+  color: #1e3a8a; /* Dark blue for contrast */
+  background-color: #d1fae5; /* Light green tone */
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #10b981; /* Emerald border */
+  border-radius: 0rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2); /* subtle green glow */
+  letter-spacing: 0.5px;
+ 
+
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.bellIcon {
+  width: 35px;
+  height: 30px;
+  color: #13396b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bellIcon:hover {
+  color: #374151;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  z-index:50;
+  width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Dropdown content styling */
+.dropdown > * {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  font-size: 17px;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.dropdown > *:last-child {
+  border-bottom: none;
+}
+
+.dropdown > *:hover {
+  background: #f8f9fa;
+}
+
+/* Style for notification items */
+.dropdown div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown strong {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.dropdown small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Delete button styling */
+.dropdown button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 3px;
+  align-self: flex-end;
+ 
+}
+
+.dropdown button:hover {
+  background: #dc2626;
+}
