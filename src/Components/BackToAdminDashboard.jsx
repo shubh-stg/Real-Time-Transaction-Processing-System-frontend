@@ -4,8 +4,10 @@ export default function BackToDashboardButton() {
   const navigate = useNavigate();
 
   return (
-    <button onClick={() => navigate("/user-dashboard")} className="backButton">
+    <button onClick={() => navigate("/admin-dashboard")} className="backButton">
       ← Back to Dashboard
     </button>
   );
 }
+
+

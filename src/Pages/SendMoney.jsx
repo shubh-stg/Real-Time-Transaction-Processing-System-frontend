@@ -74,22 +74,22 @@ export default function SendMoney() {
               setStatus(" Transaction may still be processing. Redirecting...");
             }
             
-            setTimeout(() => navigate("/userdashboard"), 2000);
+            setTimeout(() => navigate("/user-dashboard"), 2000);
           } catch (err) {
             console.error("Error fetching notifications:", err);
             setStatus("⏳ Transaction submitted. Check notifications. Redirecting...");
-            setTimeout(() => navigate("/userdashboard"), 2000);
+            setTimeout(() => navigate("/user-dashboard"), 2000);
           }
         }, 6000);
         
       } else {
         setStatus("❌ Failed to submit transaction. Please try again.");
-        setTimeout(() => navigate("/userdashboard"), 3000);
+        setTimeout(() => navigate("/user-dashboard"), 3000);
       }
 
     } catch (err) {
       setStatus("❌ Error submitting transaction. Please try again.");
-      setTimeout(() => navigate("/userdashboard"), 3000);
+      setTimeout(() => navigate("/user-dashboard"), 3000);
     } finally {
       setLoading(false);
     }

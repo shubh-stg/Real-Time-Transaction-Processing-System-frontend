@@ -1,0 +1,67 @@
+.navbar {
+  width: 100%;
+  background-color: #89ebaf;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+}
+
+.icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.appName {
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex: 0 0 auto;
+}
+
+.userPanel {
+  font-size: 2rem; /* Adjusted for better balance */
+  font-weight: 700;
+  color: #1e3a8a; /* Dark blue for contrast */
+  background-color: #d1fae5; /* Light green tone */
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #10b981; /* Emerald border */
+  border-radius: 0rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.2); /* subtle green glow */
+  letter-spacing: 0.5px;
+ 
+
+}

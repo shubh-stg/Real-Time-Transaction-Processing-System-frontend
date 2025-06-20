@@ -1,0 +1,132 @@
+
+body {
+  background:linear-gradient(135deg, #6077de 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 3px solid #e7e7e7;
+  padding-bottom: 15px;
+  font-family: serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: black;
+  color: white;
+}
+
+.table th {
+  padding: 20px 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #4a5568;
+  color: #e2e8f0;
+}
+
+.table td {
+  padding: 18px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1a202c;
+  background-color: #ffffff;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.table tbody tr:nth-child(even):hover {
+  background-color: #f1f5f9;
+}
+
+.table button {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+}
+
+.table button:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.4);
+}
+
+.table button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+}
+.backButtonWrapper {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+  }
+  
+  .table button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

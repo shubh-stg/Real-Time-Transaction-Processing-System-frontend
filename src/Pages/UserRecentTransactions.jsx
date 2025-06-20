@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getRecentTransactionsForUser } from '../Service/UserService';
-import styles from "./UserRecentTransactions.module.css"
+import styles from "./UserRecentTransactions.module.css";
 import BackToDashboardButton from '../Components/BackToDashboardButton';
 
 const UserRecentTransactions = () => {
