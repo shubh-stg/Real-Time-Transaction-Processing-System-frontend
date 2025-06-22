@@ -1,12 +1,27 @@
-# React + Vite
+# 💻 Frontend – React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MoneyFlow Frontend
 
-Currently, two official plugins are available:
+A clean, interactive frontend for MoneyFlow with support for **role-based dashboards**, **transaction history**, **balance analytics**, and **notifications UI**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React.js (Vite or Create React App)
+- Axios
+- Recharts (for graphs)
+- React Router DOM
+- CSS Modules (component-wise styling)
+- JWT auth with Axios interceptors
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- 🔐 Login/Register (JWT secured)
+- 📋 User dashboard with:
+   - Balance Overview
+   - Recent Transactions
+   - Send Money
+   - Notification Dropdown (Success, Warning, Failure)
+- 🛠️ Admin dashboard with:
+   - All Users list (Delete access)
+   - Daily Transaction Charts
+   - Status Ratios and Top Senders
