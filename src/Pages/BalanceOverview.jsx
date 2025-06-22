@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getUserBalance } from "../Service/UserService";
 import styles from "./Balance.module.css"
+import UserNavbar from "../Components/UserNavbar";
 import { 
   Wallet, 
   ArrowUpRight, 
@@ -14,8 +15,9 @@ const BalanceOverview = () => {
   const [overview, setOverview] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  //const userId = localStorage.getItem("userId");
-  const userId = 19847640;
+
+  const userId = localStorage.getItem("userId");
+ 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,8 +40,9 @@ const BalanceOverview = () => {
 
 
   return (
-    
-    <div className={styles.container}>
+    <div>
+      <UserNavbar/>
+      <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>Financial Overview</h1>
         <p className={styles.subtitle}>Your account summary and transaction statistics</p>
@@ -70,7 +73,7 @@ const BalanceOverview = () => {
         <div className={styles.card}>
           <div className={styles.cardHeader}>
             <Activity size={24} className={styles.iconTransactions} />
-            <h3>Total Transactions</h3>
+            <h3>Total Successful Transactions</h3>
           </div>
           <p>{overview.totalTransactions.toLocaleString()}</p>
         </div>
@@ -91,6 +94,8 @@ const BalanceOverview = () => {
       </div>
       <div className={styles.backButtonWrapper}><BackToDashboardButton/></div>
     </div>
+    </div>
+    
   );
 
 };

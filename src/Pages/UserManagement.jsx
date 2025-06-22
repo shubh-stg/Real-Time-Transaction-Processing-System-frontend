@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { deleteUser, getAllUsers } from "../Service/AdminService";
 import styles from  "./UserManagement.module.css"
 import BackToDashboardButton from "../Components/BackToAdminDashboard";
-
+import AdminNavbar from "../Components/AdminNavbar";
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,7 +41,9 @@ const UserManagement = () => {
   if (error) return <div>Failed to load users</div>;
 
    return (
-    <div className={styles.container}>
+    <div>
+      <AdminNavbar/>
+      <div className={styles.container}>
       <h1 className={styles.heading}>Users</h1>
       <table className={styles.table}>
         <thead>
@@ -68,6 +70,8 @@ const UserManagement = () => {
 
       <div className={styles.backButtonWrapper}><BackToDashboardButton/></div>
     </div>
+    </div>
+    
   );
 };
 

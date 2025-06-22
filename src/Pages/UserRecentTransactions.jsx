@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { getRecentTransactionsForUser } from '../Service/UserService';
 import styles from "./UserRecentTransactions.module.css";
 import BackToDashboardButton from '../Components/BackToDashboardButton';
-
+import UserNavbar from "../Components/UserNavbar";
 const UserRecentTransactions = () => {
-  // const userId=localStorage.getItem("userId");
-  const userId=19847641;
+  
+  const userId=localStorage.getItem("userId");
+ 
    const [transactions, setTransactions] = useState([]);
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
@@ -61,7 +62,9 @@ const UserRecentTransactions = () => {
   };
 
 return (
-  <div className={styles.container}>
+  <div>
+    <UserNavbar/>
+    <div className={styles.container}>
     <h2 className={styles.title}>Recent Transactions</h2>
 
     <div className={styles.tableWrapper}>
@@ -119,6 +122,8 @@ return (
 
     <div className={styles.backButtonWrapper}><BackToDashboardButton/></div>
   </div>
+  </div>
+  
 );
 
 }

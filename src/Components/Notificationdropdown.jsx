@@ -8,8 +8,8 @@ import {
 const NotificationDropdown = () => {
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
-    const userId = 19847641;// you can switch to localStorage later
-// const userId = localStorage.getItem("userId");
+    
+   const userId = localStorage.getItem("userId");
   useEffect(() => {
     const fetchnoti = async () => {
       try {

@@ -5,7 +5,7 @@ import StatusRatioChart from '../Components/StatusRatioChart';
 import DailyTransactionChart from '../Components/DailyTransactionChart';
 import TopUsers from '../Components/TopUsers';
 import BackToDashboardButton from '../Components/BackToAdminDashboard';
-
+import AdminNavbar from '../Components/AdminNavbar';
 const Statistics = () => {
 
   const [stats, setStats] = useState(null);
@@ -33,7 +33,9 @@ const Statistics = () => {
   if (!stats) return <div className={styles.error}>Failed to load stats</div>;
 
   return (
-    <div className={styles.dashboardContainer}>
+    <div>
+      <AdminNavbar/>
+      <div className={styles.dashboardContainer}>
       <div className={styles.dashboardHeader}>
         <h1 className={styles.dashboardTitle}>Statistics</h1>
         {/* <p className={styles.dashboardSubtitle}>Monitor your platform's performance and analytics</p> */}
@@ -75,6 +77,8 @@ const Statistics = () => {
       </div>
       <div className={styles.backButtonWrapper}><BackToDashboardButton/></div>
     </div>
+    </div>
+    
   );
 }
 

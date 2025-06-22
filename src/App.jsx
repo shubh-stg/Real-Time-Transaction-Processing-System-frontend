@@ -12,6 +12,8 @@ import AdminDashBoard from './Components/AdminDashBoard';
 import UserManagement from './Pages/UserManagement';
 import Statistics from './Pages/Statistics';
 import StatusRatioChart from './Components/StatusRatioChart';
+import ProtectedRoute from './Components/ProtectedRoute';
+import UnauthorizedPage from './Components/UnauthorizedPage';
 
 function App() {
  
@@ -22,13 +24,47 @@ function App() {
         <Route path='/' element={<LandingPage/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/login' element={<Login/>} ></Route>
-        <Route path='/user-dashboard' element={<UserDashboard/>}></Route>
-        <Route path='/send' element={<SendMoney/>}></Route>
-        <Route path='/balance' element={<BalanceOverview/>}></Route>
-        <Route path='/transactions' element={<UserRecentTransactions/>}></Route>
-        <Route path='/admin-dashboard' element={<AdminDashBoard/>}></Route>
-        <Route path='/admin/users' element={<UserManagement/>}></Route>
-        <Route path='/admin/statistics' element={<Statistics/>}></Route>
+
+
+        <Route path='/user-dashboard' element={
+          <ProtectedRoute requiredRole="ROLE_USER">
+            <UserDashboard/>
+          </ProtectedRoute>
+        }></Route>
+
+
+        <Route path='/send' element=
+        {
+          <ProtectedRoute requiredRole="ROLE_USER">
+            <SendMoney/>
+          </ProtectedRoute>
+        }></Route>
+
+        <Route path='/balance' element={        
+            <ProtectedRoute requiredRole="ROLE_USER">
+            <BalanceOverview/>
+          </ProtectedRoute>}></Route>
+        <Route path='/transactions' element={         
+           <ProtectedRoute requiredRole="ROLE_USER">
+            <UserRecentTransactions/>
+          </ProtectedRoute>}></Route>
+
+        <Route path='/admin-dashboard' element={      
+          <ProtectedRoute requiredRole="ROLE_ADMIN">
+            <AdminDashBoard/>
+          </ProtectedRoute>}></Route>
+        
+        <Route path='/admin/users' element={
+          <ProtectedRoute requiredRole="ROLE_ADMIN">
+            <UserManagement/>
+          </ProtectedRoute>
+        }></Route>
+        <Route path='/admin/statistics' element={
+          <ProtectedRoute requiredRole="ROLE_ADMIN">
+            <Statistics/>
+          </ProtectedRoute>
+          }></Route>
+        <Route path='/unauthorized' element={<UnauthorizedPage/>}></Route>
         
       </Routes> 
     </Router>

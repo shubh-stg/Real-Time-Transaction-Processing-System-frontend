@@ -1,12 +1,12 @@
-import axios from "axios"
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+import apiClient from "./apiClient";
 
-export const getAllUsers=()=>axios.get(`${BASE_URL}/analytics/get-users`);
-export const deleteUser=()=>axios.delete(`${BASE_URL}/analytics/delete-user`);
 
-export const getCards=()=>axios.get(`${BASE_URL}/analytics/admin-analytics`);
-export const getStatusRatio=()=>axios.get(`${BASE_URL}/analytics/status-ratio`);
-export const getDailyTransactions=()=>axios.get(`${BASE_URL}/analytics/daily-volume`);
-export const getTopUsers=()=>axios.get(`${BASE_URL}/analytics/top-users`);
+export const getAllUsers=()=>apiClient.get(`/analytics/get-users`);
+export const deleteUser=()=>apiClient.delete(`/analytics/delete-user`);
+
+export const getCards=()=>apiClient.get(`/analytics/admin-analytics`);
+export const getStatusRatio=()=>apiClient.get(`/analytics/status-ratio`);
+export const getDailyTransactions=()=>apiClient.get(`/analytics/daily-volume`);
+export const getTopUsers=()=>apiClient.get(`/analytics/top-users`);
 
